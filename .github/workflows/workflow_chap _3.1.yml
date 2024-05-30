@@ -1,0 +1,29 @@
+name: players_info
+on:
+  push:
+    branches:
+      - devops
+  workflow_dispatch:
+    inputs:
+      name:
+        description: "username"
+        type: string
+      level:
+        description: "level"
+        type: string
+      class:
+        description: "class"
+        type: choice
+        options:
+          - "jedi"
+          - "sith"
+          - "rebel"
+
+jobs:
+  informations:
+    name: "info "
+    runs-on: ubuntu-latest
+    steps:
+      - name: "info"
+        run: |
+          echo "Le joueur ${{ inputs.username }} est de niveau ${{ inputs.level}} et joue un ${{ inputs.class }} !"
