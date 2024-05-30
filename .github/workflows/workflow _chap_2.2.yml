@@ -1,0 +1,29 @@
+name: "say hello fan of manchester united"
+on:
+  push:
+
+jobs:
+  first_job:
+    name: "hello fan de man utd"
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Say Hello fan of Man UTd
+        run: |
+          echo "Hello,  fan of Man UTd!"
+  Secondary_job:
+    name: "hello World"
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Say Hello fan of Real Madrid
+        run: |
+          echo "Hello,  fan of Real Madrid!"
+  Third_job:
+    name: "hello Paris SG fans "
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Say Hello fan of Paris SG
+        run: |
+          echo "Hello,  fan of Paris SG!"
