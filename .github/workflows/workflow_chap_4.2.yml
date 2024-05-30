@@ -3,12 +3,9 @@ on:
   push:
     branches:
       - main
-
-
 jobs:
   confidencial_secret:
     runs-on: ubuntu-latest
-
     steps:
       - name: afficher le mon secret
         run: |
