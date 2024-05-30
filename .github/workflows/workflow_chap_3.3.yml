@@ -1,4 +1,4 @@
-name: workflow with several events
+name: workflow_chap_3.3
 on:
   push:
     branches: [ * ]

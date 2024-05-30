@@ -1,4 +1,4 @@
-name: Checkout avec setup
+name: workflow_chap_3.5
 
 on:
   push:

@@ -1,4 +1,4 @@
-name: players_info
+name: workflow_chap_3.1
 on:
   push:
     branches:

@@ -1,4 +1,4 @@
-name: workflow_programme.yml
+name: workflow_chap_3.2
 on:
   schedule:
     - cron: "*/10 * * * *"

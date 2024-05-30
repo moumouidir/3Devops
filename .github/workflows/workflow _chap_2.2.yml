@@ -1,4 +1,4 @@
-name: "say hello fan of manchester united"
+name: workflow_chap_2.2
 on:
   push:
 

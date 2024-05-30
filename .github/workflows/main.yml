@@ -1,4 +1,4 @@
-name: "say hello world on  each push "
+name: workflow_chap_1.1
 
 on:
   push:
