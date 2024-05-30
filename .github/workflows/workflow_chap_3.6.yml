@@ -1,0 +1,36 @@
+name: workflow_chap_3.6.yml
+on:
+  push:
+    branches:
+      - main
+jobs:
+  testing_phase:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: recupuration du tag "3.1.0"
+        uses: actions/checkout@v3
+        with:
+          ref: '3.1.0'
+          path: 'tldr-python-client'
+
+      - name: Configuration de Python 3.10
+        uses: actions/setup-python@v3
+        with:
+          python-version: '3.10'
+
+      - name: Installation des dépendances
+        run:
+          pip install -r requirements.txt
+
+      - name: Installation de pytest
+        run:
+          pip install pytest
+
+      - name: Exécution des tests
+        run: |
+          pytest
+
+      - name: Vérification du statut final du job
+        run: |
+          echo "Le statut final du job est : $?"
