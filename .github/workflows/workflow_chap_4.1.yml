@@ -1,0 +1,16 @@
+name: workflow_chap_4.1.yml
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  dispaly_env:
+    runs-on: ubuntu-latest
+    env:
+      message: ce est une variable de environnement .
+    steps:
+      - name: afficher Msg
+        run : |
+          echo " le contenu de la variable Msg: $message
+        
