@@ -1,0 +1,16 @@
+name: workflow_cha_4.2
+on:
+  push:
+    branches:
+      - main
+
+
+jobs:
+  confidencial_secret:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: afficher le mon secret
+        run: |
+          echo " ma variable secret est :${{secrets.SUPER_SECRET}}"
+

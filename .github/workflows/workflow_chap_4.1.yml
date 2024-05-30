@@ -1,4 +1,4 @@
-name: workflow_chap_4.1.yml
+name: workflow_chap_4.1
 on:
   push:
     branches:
