@@ -1,0 +1,23 @@
+name: Checkout avec setup
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  execute_script:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Setup Python 3.10
+        uses: actions/setup-python@v3
+        with:
+          python-version: '3.10'
+
+      - name: Exécuter script demo.py
+        run: |
+          python demo.py
