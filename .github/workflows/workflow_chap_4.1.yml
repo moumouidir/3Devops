@@ -12,5 +12,5 @@ jobs:
     steps:
       - name: afficher Msg
         run : |
-          echo " le contenu de la variable Msg: $message
+          echo " le contenu de la variable Msg: $message "
         
