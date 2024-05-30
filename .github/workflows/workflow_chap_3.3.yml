@@ -1,0 +1,17 @@
+name: workflow with several events
+on:
+  push:
+    branches: [ * ]
+  workflow_dispatch: {}
+  schedule:
+    - cron: "*/10 * * * *"
+
+jobs:
+  triggered_by:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Afficher l'événement déclencheur
+        run: |
+          echo "Le job a été déclenché par un événement de type: ${{ github.event.type }}"
+
