@@ -14,8 +14,8 @@ jobs:
       - name: authentification docker-hub
         uses: docker/login-action@v1
         with:
-          username: ${{ secrets.DOCKERHUB_USERNAME }}
-          password: ${{ secrets.DOCKERHUB_TOKEN }}
+          username: ${{secrets.USER_DOCKER}}
+          password: ${{secrets.DOCKER_TOKEN}}
 
       - name: Construire et publier l'image
         uses: docker/build-push-action@v2
@@ -23,5 +23,5 @@ jobs:
           context: .
           file: Dockerfile
           push: true
-          tag: idir2012/dev-exo-4-4:demo
+          tag: ${{secrets.USER_DOCKER}}/dev-exo-4-4:demo
 
