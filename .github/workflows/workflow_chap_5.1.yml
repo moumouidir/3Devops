@@ -10,6 +10,6 @@ jobs:
       - name: test
         run: |
           echo "::notice::This is a notice message"
-          echo "::warrning::This is a warrning message"
+          echo "::warning::This is a warning message"
           echo "::error:: this is error message"
 
