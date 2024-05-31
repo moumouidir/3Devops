@@ -1,0 +1,15 @@
+name: workflow_chap.5.2
+on:
+  push:
+    branches:
+      - main
+jobs:
+  log_group:
+    runs-on: ubuntu-latest
+    steps:
+      - name: ecole-it
+        run: |
+          echo "::group::ecole-it"
+          echo "hello, ecole-it"
+          echo "::endgroup::"
+          echo "Ceci n'est pas dans le groupe"
