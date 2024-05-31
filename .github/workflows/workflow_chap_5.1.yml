@@ -1,0 +1,15 @@
+name: workflow_chap_5.1
+on:
+  push:
+    branches:
+      - main
+jobs:
+  information_display:
+    runs-on: ubuntu-latest
+    steps:
+      - name: test
+        run: |
+          echo "::notice::This is a notice message"
+          echo "::warrning::This is a warrning message"
+          echo "::error:: this is error message"
+
