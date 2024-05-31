@@ -28,5 +28,3 @@ jobs:
         run: |
           echo "HOST=${{ needs.prepare_tests.outputs.HOST }}"
           echo "DATABASE=${{ needs.prepare_tests.outputs.DATABASE }}"
-      
-
